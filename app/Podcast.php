@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class podcast extends Model
+class Podcast extends Model
 {
     //
 }

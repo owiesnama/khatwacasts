@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\podcast;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $podcasts = Podcast::all();
+
+        return view('index', compact('podcasts'));
+    }
+
+    /**
+     * Show single podcast
+     * @param podcast $podcast
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show(Podcast $podcast)
+    {
+        return view('podcast.show',compact('podcast'));
     }
 }

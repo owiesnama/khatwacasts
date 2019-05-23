@@ -17,4 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('podcast','PodcastsController');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::resource('podcasts','PodcastsController');
+});

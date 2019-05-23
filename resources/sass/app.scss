@@ -1,8 +1,23 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
 
+@tailwind base;
 
-@import "~materialize-css/sass/materialize";
+@tailwind components;
+
+
+
+@tailwind utilities;
+
+a,button {
+  font-weight: 300;
+  transition: background .3s;
+}
+
+.section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
