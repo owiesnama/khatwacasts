@@ -11,17 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PodcastsController@index');
 
 Auth::routes();
 
-Route::resource('podcast','PodcastsController');
+Route::resource('podcast', 'PodcastsController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/trending', 'TrendsController@index');
+
+Route::get('{username}/likes', 'LikesController@index');
 
 
 Route::prefix('admin')->namespace('Admin')->group(function () {
-    Route::resource('podcasts','PodcastsController');
+    Route::resource('podcasts', 'PodcastsController');
+    Route::resource('users', 'UsersController');
 });

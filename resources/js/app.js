@@ -25,6 +25,7 @@ Vue.use(VModal)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('AudioPlayer', require('./components/AudioPlayer.vue').default);
+Vue.component('LikeButton', require('./components/LikeButton.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

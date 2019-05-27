@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         $podcasts = Podcast::all();
 
+        dd($podcasts);
         return view('index', compact('podcasts'));
     }
 

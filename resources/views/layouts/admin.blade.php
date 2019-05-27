@@ -39,7 +39,7 @@
                                 <a href="{{url('admin/podcasts')}}" class="font-hairline py-2 text-indigo-800">Podcasts</a>
                             </li>
                             <li class="text-black">
-                                <a href="" class="font-hairline py-2 text-indigo-800">Users</a>
+                                <a href="{{url('admin/users')}}" class="font-hairline py-2 text-indigo-800">Users</a>
                             </li>
                         </ul>
                     </section>

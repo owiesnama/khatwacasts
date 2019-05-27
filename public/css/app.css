@@ -7959,6 +7959,90 @@ a, button {
   padding-right: 2rem;
 }
 
+input::-webkit-input-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #718096;
+}
+
+input::-moz-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #718096;
+}
+
+input:-ms-input-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #718096;
+}
+
+input::-ms-input-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #718096;
+}
+
+input::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #718096;
+}
+
+.input {
+  border-width: 1px;
+  border-radius: 9999px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  outline: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.input-field {
+  margin-bottom: 0.75rem;
+}
+
+.card-header {
+  border-bottom-width: 1px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 2;
+  font-weight: 300;
+  color: #a0aec0;
+}
+
+.card-body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button {
+  border-width: 1px;
+  border-radius: 9999px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #fff;
+  background-color: #1E1C44;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+.invalid-feedback {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  font-weight: 100;
+}
+
+.outline-none:focus {
+  outline: none;
+}
+
 @media (min-width: 320){
   .xs\:appearance-none{
     -webkit-appearance: none;
