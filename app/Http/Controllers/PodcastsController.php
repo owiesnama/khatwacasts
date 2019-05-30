@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Podcast;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PodcastsController extends Controller
 {
@@ -14,20 +16,15 @@ class PodcastsController extends Controller
      */
     public function index()
     {
-        $podcasts = Podcast::all();
+        $podcasts = Podcast::latest()->paginate(10);
 
-        return view('index',compact('podcasts'));
+        if (request()->wantsJson()) {
+            return $podcasts;
+        }
+
+        return view('index', compact('podcasts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,7 +34,24 @@ class PodcastsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request->all());
+        $this->validate($request, [
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required'],
+            'podcast' => ['required', 'file']
+        ]);
+        $filename = time() . "_" . Str::slug($request->title) . "." . $request->podcast->getClientOriginalExtension();
+        $podcast = new Podcast();
+        $podcast->title = $request->title;
+        $podcast->description = $request->description;
+        $podcast->name = $filename;
+
+        $request->file('podcast')->storeAs('public/podcasts', $filename);
+
+
+        $podcast->save();
+
+        return back();
     }
 
     /**

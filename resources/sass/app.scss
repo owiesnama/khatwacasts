@@ -9,6 +9,11 @@
 
 @tailwind utilities;
 
+*[v-clock] {
+  display: none;
+  visibility: hidden;
+}
+
 a, button {
   font-weight: 300;
   transition: background .3s;

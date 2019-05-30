@@ -21,11 +21,19 @@ Vue.use(VModal)
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+const files = require.context('./pages', true, /\.vue$/i);
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('AudioPlayer', require('./components/AudioPlayer.vue').default);
 Vue.component('LikeButton', require('./components/LikeButton.vue').default);
+Vue.component('FileInput', require('./components/FileInput.vue').default);
+
+
+
+
+import InfiniteLoading from 'vue-infinite-loading';
+
+Vue.use(InfiniteLoading);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

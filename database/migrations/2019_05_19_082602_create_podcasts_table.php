@@ -15,10 +15,9 @@ class CreatePodcastsTable extends Migration
     {
         Schema::create('podcasts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('url');
-            $table->text('title');
+            $table->string('name');
+            $table->string('title');
             $table->text('description');
-            $table->double('length');
             $table->timestamps();
         });
     }

@@ -18,9 +18,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Podcast::class, function (Faker $faker) {
     return [
-        'url' => $faker->url,
+        'name' => $faker->word,
         'title' => $faker->sentence,
         'description' => $faker->paragraph,
-        'length' => $faker->time(),
     ];
 });

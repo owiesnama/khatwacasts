@@ -17,7 +17,7 @@ class PodcastsController extends Controller
     {
         $podcasts = Podcast::all();
 
-        return view('admin.podcasts.index');
+        return view('admin.podcasts.index',compact('podcasts'));
     }
 
     /**
