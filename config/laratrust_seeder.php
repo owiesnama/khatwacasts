@@ -4,15 +4,15 @@ return [
     'role_structure' => [
         'superadministrator' => [
             'users' => 'c,r,u,d',
-            'acl' => 'c,r,u,d',
-            'profile' => 'r,u'
+            'podcast' => 'c,r,u,d',
+            'comments' => 'c,r,u,d'
         ],
         'administrator' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u'
+            'podcast' => 'c,r,u,d',
+            'users' => 'r,u'
         ],
         'user' => [
-            'profile' => 'r,u'
+            'podcast' => 'r'
         ],
     ],
     'permission_structure' => [
